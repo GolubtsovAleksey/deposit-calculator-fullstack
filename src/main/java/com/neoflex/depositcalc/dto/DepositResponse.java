@@ -14,6 +14,7 @@ public class DepositResponse {
         this.profit = profit;
     }
 
+    // используются во время тестового запроса, Без них Spring Boot выдаст ошибку 406 Not Acceptable!
     public BigDecimal getTotal() {
         return total;
     }

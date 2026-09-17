@@ -3,7 +3,6 @@ package com.neoflex.depositcalc.service;
 import com.neoflex.depositcalc.dto.DepositRequest;
 import com.neoflex.depositcalc.dto.DepositResponse;
 import org.springframework.stereotype.Service;
-
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
