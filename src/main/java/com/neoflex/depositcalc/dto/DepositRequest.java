@@ -38,4 +38,17 @@ public class DepositRequest {
     public BigDecimal getRate() {
         return rate;
     }
+
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
+    }
+
+    public void setMonths(Integer months) {
+        this.months = months;
+    }
+
+    public void setRate(BigDecimal rate) {
+        this.rate = rate;
+    }
+
 }
