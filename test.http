@@ -1,0 +1,9 @@
+### Тестовый расчет вклада (Пример из ТЗ)
+POST http://localhost:8080/api/calculate
+Content-Type: application/json
+
+{
+  "amount": 100000,
+  "months": 12,
+  "rate": 8.5
+}
