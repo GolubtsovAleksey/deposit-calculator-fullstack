@@ -39,6 +39,7 @@ public class DepositRequest {
         return rate;
     }
 
+    //тут сеттеры нужны для десериализации Jackson из части фронтенд.
     public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
