@@ -6,6 +6,7 @@ import com.neoflex.depositcalc.service.DepositService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
+//точка входа для сетевых HTTP-запросов, содержит в себе @Controller, @ResponseBody
 @RestController
 @RequestMapping("/api")
 // @CrossOrigin разрешает нашему будущему React-фронтенду слать запросы на бэкенд

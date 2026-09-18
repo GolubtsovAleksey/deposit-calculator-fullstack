@@ -51,5 +51,4 @@ public class DepositRequest {
     public void setRate(BigDecimal rate) {
         this.rate = rate;
     }
-
 }

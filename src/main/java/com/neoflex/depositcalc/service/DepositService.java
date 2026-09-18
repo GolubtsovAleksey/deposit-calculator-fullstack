@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-// содержит всю бизнес-логику.
 @Service
 public class DepositService {
 
@@ -19,8 +18,7 @@ public class DepositService {
         int months = request.getMonths();
 
         // 1. Нахожу процентную ставку за один месяц (Ставка / 100 / 12 месяцев)
-        // Чтобы не потерять точность при делении, использую константу "1200" (100 * 12).
-        // Задаем округление до 10 знаков после запятой (RoundingMode.HALF_UP).
+        // Задаю округление до 10 знаков после запятой (RoundingMode.HALF_UP).
         BigDecimal monthlyRate = rate.divide(new BigDecimal("1200"), 10, RoundingMode.HALF_UP);
 
         // 2. Считаю основание для возведения в степень: (1 + месячная ставка)
