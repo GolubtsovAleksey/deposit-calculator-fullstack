@@ -36,3 +36,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+/deposit-calc-ui/node_modules/
+/deposit-calc-ui/dist/
