@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
-import type { ChangeEvent, FormEvent } from 'react';
+import type { ChangeEvent } from 'react';
 import type { DepositRequest, DepositResponse } from './types';
+
 
 export default function App() {
     const [formData, setFormData] = useState<DepositRequest>({
@@ -23,7 +24,7 @@ export default function App() {
         }));
     };
 
-    const handleSubmit = async (event: FormEvent) => {
+    const handleSubmit = async (event: any) => {
         event.preventDefault();
         setErrors([]); // Очищаем прошлые ошибки перед расчетом
 
