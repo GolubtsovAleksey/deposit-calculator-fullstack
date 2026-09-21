@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import java.util.HashMap;
 import java.util.Map;
 
-// @RestControllerAdvice говорит Спрингу перехватывать ошибки во всех контроллерах.
+// через Спринг перехватывает ошибки во всех контроллерах.
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 

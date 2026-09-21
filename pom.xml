@@ -45,6 +45,12 @@
             <!--говорит о том, что этот код нужен только во время тестирования и не попадет в финальную сборку-->
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
     <!--Зачем нужен: Стандартный Java-проект компилируется в обычный jar, который нельзя запустить двойным кликом, потому что в нем нет встроенных зависимостей-->

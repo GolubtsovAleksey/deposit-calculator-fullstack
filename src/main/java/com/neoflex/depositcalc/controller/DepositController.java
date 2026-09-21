@@ -4,21 +4,16 @@ import com.neoflex.depositcalc.dto.DepositRequest;
 import com.neoflex.depositcalc.dto.DepositResponse;
 import com.neoflex.depositcalc.service.DepositService;
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-//точка входа для сетевых HTTP-запросов, содержит в себе @Controller, @ResponseBody
-@RestController
+@RequiredArgsConstructor // она(Lombok) создаст конструктор для final-поля depositService!(Внедряю сервис через конструктор)
+@RestController //точка входа для сетевых HTTP-запросов, содержит в себе @Controller, @ResponseBody
 @RequestMapping("/api")
-// @CrossOrigin разрешает нашему будущему React-фронтенду слать запросы на бэкенд
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*") // @CrossOrigin разрешает нашему будущему React-фронтенду слать запросы на бэкенд
 public class DepositController {
 
     private final DepositService depositService;
-
-    // Внедряю сервис через конструктор
-    public DepositController(DepositService depositService) {
-        this.depositService = depositService;
-    }
 
     // Эндпоинт для расчета вклада.
     @PostMapping("/calculate")

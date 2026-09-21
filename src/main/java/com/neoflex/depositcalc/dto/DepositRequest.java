@@ -4,10 +4,12 @@ import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import java.math.BigDecimal;
+import lombok.Getter;
+import lombok.Setter;
 
-// DepositRequest (DTO) служит контейнером для данных,
-// которые фронтенд отправляет на сервер в формате JSON.
-public class DepositRequest {
+@Getter
+@Setter //  она(Lombok) сгенерирует все сеттеры для Jackson, сеттеры нужны для десериализации Jackson из части фронтенд
+public class DepositRequest {  //этот (DTO) служит контейнером для данных, фронтенд отправляет на сервер в формате JSON.
 
     // Сумма вклада: от 1 000 до 10 000 000 рублей по ТЗ
     @NotNull(message = "Сумма вклада не может быть пустой")
@@ -27,28 +29,4 @@ public class DepositRequest {
     @Max(value = 20, message = "Максимальная ставка — 20%")
     private BigDecimal rate;
 
-    public BigDecimal getAmount() {
-        return amount;
-    }
-
-    public Integer getMonths() {
-        return months;
-    }
-
-    public BigDecimal getRate() {
-        return rate;
-    }
-
-    //тут сеттеры нужны для десериализации Jackson из части фронтенд.
-    public void setAmount(BigDecimal amount) {
-        this.amount = amount;
-    }
-
-    public void setMonths(Integer months) {
-        this.months = months;
-    }
-
-    public void setRate(BigDecimal rate) {
-        this.rate = rate;
-    }
 }
