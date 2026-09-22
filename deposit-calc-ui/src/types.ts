@@ -10,4 +10,5 @@ export interface DepositRequest {
 export interface DepositResponse {
     total: number;  // Итоговая сумма (тело вклада + проценты)
     profit: number; // Чистый доход
+    initialAmount?: number;
 }
